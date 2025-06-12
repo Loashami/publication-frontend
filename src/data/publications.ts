@@ -32,3 +32,8 @@ export const updatePublication = async (
     );
     return response.data;
 };
+
+export const deletePublication = async (id: number) => {
+    const response = await api.delete<void>(`/publications/${id}`);
+    return response.data;
+};
