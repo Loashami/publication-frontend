@@ -17,6 +17,7 @@ import {
     TableHeader,
     TableRow,
 } from "./ui/table";
+import PublicationEditDialogButton from "./publication-edit-dialog-button";
 
 const getStatusBadge = (status: string) => {
     const variants = {
@@ -103,7 +104,10 @@ export default function PublicationListTable() {
                                     {getStatusBadge(publication.estado)}
                                 </TableCell>
                                 <TableCell className="text-right">
-                                    <div className="flex justify-end gap-2"></div>
+                                    <div className="flex justify-end gap-2">
+                    <PublicationEditDialogButton publication={publication} />
+
+                                    </div>
                                 </TableCell>
                             </TableRow>
                         ))}
