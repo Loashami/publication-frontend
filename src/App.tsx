@@ -1,10 +1,8 @@
 function App() {
     return (
-        <>
-            <div className="flex items-center justify-center h-screen">
-                Hola Mundo!
-            </div>
-        </>
+        <div className="min-h-screen flex items-center justify-center bg-white text-black p-4">
+            Hola
+        </div>
     );
 }
 
