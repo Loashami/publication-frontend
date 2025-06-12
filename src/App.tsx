@@ -1,7 +1,9 @@
+import PublicationListTable from "./components/publication-list-table";
+
 function App() {
     return (
-        <div className="min-h-screen flex items-center justify-center bg-white text-black p-4">
-            Hola
+        <div className="container mx-auto p-6 space-y-6">
+            <PublicationListTable />
         </div>
     );
 }
