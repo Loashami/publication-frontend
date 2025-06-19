@@ -34,7 +34,7 @@ export default function PublicationDeleteConfirmButton({
         setIsOpen(false)
         queryClient.invalidateQueries({ queryKey: ["publications"] })
       } catch (error) {
-        console.error("Error al eliminar la publicación:", error)
+        console.error("Error al eliminar la publicación: vuelva a intentarlo", error)
       }
     })
   }
@@ -57,7 +57,7 @@ export default function PublicationDeleteConfirmButton({
         <AlertDialogFooter>
           <AlertDialogCancel disabled={isPending}>Cancelar</AlertDialogCancel>
           <AlertDialogAction disabled={isPending} onClick={handleDelete}>
-            {isPending ? "Eliminando..." : "Eliminar"}
+            {isPending ? "Eliminando..." : "Eliminado"}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>
